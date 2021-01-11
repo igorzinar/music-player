@@ -7,13 +7,13 @@ import data from './components/Utilits'
 
 function App() {
 
-//   const [songs, setSongs] = useState(data())
-// const [currentSong, setCurrentSong] = useState(songs.map(song => `<div>song</div>`))
-// console.log(currentSong)
+  const [songs, setSongs] = useState(data())
+const [currentSong, setCurrentSong] = useState(songs.[4])
+console.log(currentSong)
 
   return (
     <div className="App">
-      <Song/>
+      <Song currentSong={currentSong} />
       <Player/>
       
     </div>
