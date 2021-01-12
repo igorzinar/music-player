@@ -1,10 +1,13 @@
 .library {
-  position: absolute;
-  top: 0px;
-  right: 100%;
-  width: 20rem;
+  // display: none;
+  // position: absolute;
+  border-radius: 10px;
+  // top: 0px;
+  // right: 100%;
+  max-width: 25%;
   height: 100%;
-  background: chartreuse;
+  // background: rgba(187, 255, 0, 0.527);
+  background: rgba(17, 17, 26, 0.1);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   overflow-y: scroll;
@@ -15,7 +18,7 @@
   }
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #454545;
+    background-color: #fff;
     border-radius: 10px;
   }
 
@@ -43,6 +46,10 @@
 
   align-items: center;
   padding: 1rem;
+  cursor: pointer;
+  &:hover {
+    background: #ffa500;
+  }
   img {
     width: 30%;
   }

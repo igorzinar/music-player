@@ -6,9 +6,8 @@ import {faPlay,faPause,faStepForward, faStepBackward} from '@fortawesome/free-so
 
 
 
-const Player = ({ currentSong, isPlaying, setIsPlaying }) => {
-// Ref 
-const audioRef = useRef(null)
+const Player = ({audioRef, currentSong, isPlaying, setIsPlaying }) => {
+
    const playSongHandler = () => {
      
        if(isPlaying){
@@ -56,8 +55,7 @@ setSongInfo({ ...songInfo, currentTime: current, duration })
                 <FontAwesomeIcon className="play-next" size="2x" icon={faStepForward} />
                 
             </div>
-            <audio onLoadedMetadata={timeUpdateHandler} onTimeUpdate={timeUpdateHandler} ref={audioRef} src={currentSong.audio}></audio>
-        </div>
+            </div>
     )
 }
 
