@@ -24,38 +24,4 @@
   h3 {
     color: #222;
   }
-  .img-wrap {
-    position: absolute;
-    top: 20px;
-    left: 30px;
-    width: 10px;
-    cursor: pointer;
-    .img-description {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50px;
-      right: 0;
-      background: transparent;
-      color: #000;
-      visibility: hidden;
-      opacity: 0;
-
-      /* transition effect. not necessary */
-      transition: opacity 0.2s, visibility 0.2s;
-    }
-    .logo-image {
-      width: 40px;
-      transition: transform 1.3s ease-in-out;
-      &:hover {
-        transform: rotate(180deg);
-      }
-    }
-
-    &:hover .img-description {
-      visibility: visible;
-      opacity: 1;
-      font-size: 1.3rem;
-    }
-  }
 }

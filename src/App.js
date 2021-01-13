@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import './styles/app.scss'
 import Song from './components/Song'
 import Player from './components/Player'
 import data from './components/Utilits'
 import Library from './components/Library'
+import Nav from './components/Nav'
 
 function App() {
   // Ref
@@ -17,6 +18,7 @@ function App() {
     currentTime: 0,
     duration: 0,
   })
+  const [libraryStatus, setLibraryStatus] = useState(false)
 
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime
@@ -31,9 +33,14 @@ function App() {
         setCurrentSong={setCurrentSong}
         isPlaying={isPlaying}
         setSongs={setSongs}
+        libraryStatus={libraryStatus}
       />
       <div className="wrap-player">
         <Song currentSong={currentSong} />
+        <Nav
+          libraryStatus={libraryStatus}
+          setLibraryStatus={setLibraryStatus}
+        />
         <Player
           currentSong={currentSong}
           setIsPlaying={setIsPlaying}
@@ -41,6 +48,8 @@ function App() {
           audioRef={audioRef}
           setSongInfo={setSongInfo}
           songInfo={songInfo}
+          songs={songs}
+          setCurrentSong={setCurrentSong}
         />
         <div>
           <audio
