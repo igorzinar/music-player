@@ -43,12 +43,13 @@
 
 .library-song {
   display: flex;
-
   align-items: center;
   padding: 1rem;
   cursor: pointer;
+  transition: 1s background;
   &:hover {
     background: #ffa500;
+    transition: 2s;
   }
   img {
     width: 30%;
@@ -62,4 +63,8 @@
       font-size: 0.7rem;
     }
   }
+}
+
+.selected {
+  background: #ffa500;
 }

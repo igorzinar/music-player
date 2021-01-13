@@ -46,9 +46,9 @@
     }
     .logo-image {
       width: 40px;
+      transition: transform 1.3s ease-in-out;
       &:hover {
         transform: rotate(180deg);
-        transition: transform 0.8s ease;
       }
     }
 
